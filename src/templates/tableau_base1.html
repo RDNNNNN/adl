@@ -1,5 +1,5 @@
 
-<form name="usrsel" data-dollar="{{dollar|default:'USD'}}" data-date_range="{{date_range|default:'YEAR'}}">
+{% comment %} <form name="usrsel" data-dollar="{{dollar|default:'USD'}}" data-date_range="{{date_range|default:'YEAR'}}">
 	{% csrf_token %}
 	
 		<span style="font-weight:bold">幣別&nbsp:&nbsp</span>
@@ -20,7 +20,7 @@
 				<input id="accumulation" type="radio" name="date_range" value="accumulation" {% if date_range|default:'year' == 'accumulation' %} checked
 						{% endif %}>
 					<label for="accumulation">累計</label>
-			</span>
+			</span> {% endcomment %}
 	{% comment %} <label for="dollar">幣值:</label>
 	<select id="dollar" name="dollar" onchange="check()">
 		　<option value="USD" selected="selectedd">美金</option>
@@ -31,7 +31,7 @@
 		　<option value="year" selected="selected">年</option>
 		　<option value="month">月</option>
 	</select> {% endcomment %}
-</form>
+{% comment %} </form> {% endcomment %}
 
     <div class="mask" id="mask" style="width:100% ; height:100%;">
         <div id="loading" >

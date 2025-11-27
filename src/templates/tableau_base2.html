@@ -1,6 +1,6 @@
 
-<form name="usrsel" data-dollar="{{dollar|default:'USD'}}" data-date_range="{{date_range|default:'YEAR'}}">
-	{% csrf_token %}
+{% comment %} <form name="usrsel" data-dollar="{{dollar|default:'USD'}}" data-date_range="{{date_range|default:'YEAR'}}">
+	{% csrf_token %} {% endcomment %}
 	
 		{% comment %} <span style="font-weight:bold">幣別&nbsp:&nbsp</span>
 			<span>
@@ -31,7 +31,7 @@
 		　<option value="year" selected="selected">年</option>
 		　<option value="month">月</option>
 	</select> {% endcomment %}
-</form>
+{% comment %} </form> {% endcomment %}
 
     <div class="mask" id="mask" style="width:100% ; height:100%;">
         <div id="loading" >
