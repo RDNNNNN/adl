@@ -22,11 +22,13 @@
         -->
 
         <ul>
+			{% comment %} 移除主頁和災害損失父項目 {% endcomment %}
 			<li>
-                <a href="{% url 'about' %}" title="關於"><i class="fas fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">主頁</span></a>
+                <a href="/tableau3" title="農業災害產物及民間設施損失"><span class="menu-item-parent">農業災害產物及民間設施損失</span></a>
             </li>
-		<li>
-                {% comment %} <a color-alert href="#"><i class="fa fa-lg fa-fw fa-cube txt-color-yellow"></i>
+			{% comment %}
+			<li>
+                <a color-alert href="#"><i class="fa fa-lg fa-fw fa-cube txt-color-yellow"></i>
                     <span class="menu-item-parent">總體</span>
                 </a>
                 <ul>
@@ -37,15 +39,20 @@
 						<a color-alert href="/tableau2"><span class="menu-item-parent">進出口總覽</span></a>
 					</li>
 				</ul>
-            </li> {% endcomment %}
+            </li>
+			{% endcomment %}
+			{% comment %} 災害損失父項目已移除，只顯示子項目
             <li>
                 <a color-alert href="#"><i class="fas fa-lg fa-fw fa-cube txt-color-blue"></i>
                     <span class="menu-item-parent">災害損失</span>
                 </a>
 				<ul>
+			{% endcomment %}
+					{% comment %} 第一個項目已移到首頁
 					<li>
 						<a color-alert href="/tableau3"><span class="menu-item-parent">農業災害產物及民間設施損失</span></a>
 					</li>
+					{% endcomment %}
 					<li>
 						<a color-alert href="/tableau4"><span class="menu-item-parent">農業災害公共設施損失 </span></a>
 					</li>
@@ -55,8 +62,10 @@
 					<li>
 						<a color-alert href="/tableau6"><span class="menu-item-parent">111年災害分布情形</span></a>
 					</li>
+			{% comment %}
 				</ul>
             </li>
+			{% endcomment %}
             {% comment %} <li>
                 <a color-alert href="#"><i class="fa fa-lg fa-fw fa-cube txt-color-green"></i>
                     <span class="menu-item-parent">農產品別</span>
